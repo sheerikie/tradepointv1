@@ -16,8 +16,8 @@ EXPOSE 8080
 CMD ["/home/ambientum/start.sh"]
 
 # To build
-# $ sudo docker build -t saulobr88/hnl5:latest .
+# $ sudo docker build -t sheerikie/tradepoint:latest .
 # To run
-# $ sudo docker run -d --rm -p 8080:8080 saulobr88/hnl5:latest
+# $ sudo docker run -d --rm -p 8080:8080 sheerikie/tradepoint:latest
 #
 
