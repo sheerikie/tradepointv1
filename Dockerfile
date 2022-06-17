@@ -11,7 +11,7 @@ RUN sudo chmod -R o+rw bootstrap storage
 EXPOSE 8080
 
 # Define environment variable
-#ENV NAME hnl5
+#ENV NAME tradepoint
 
 CMD ["/home/ambientum/start.sh"]
 
