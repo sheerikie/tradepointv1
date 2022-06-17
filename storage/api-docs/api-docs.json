@@ -5,11 +5,11 @@
         "description": "Documenta\u00e7\u00e3o criada usando o Swagger.",
         "contact": {
             "name": "Saulo Gomes",
-            "url": "https://github.com/saulobr88"
+            "url": "https://github.com/sheerikie"
         },
         "version": "1.0"
     },
-    "host": "https://hnl5.herokuapp.com",
+    "host": "https://tradepoint.herokuapp.com",
     "basePath": "",
     "schemes": [
         "https",

@@ -14,13 +14,13 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
  *
  * @SWG\Swagger(
  *     basePath="",
- *     host="https://hnl5.herokuapp.com",
+ *     host="https://tradepoint.herokuapp.com",
  *     schemes={"https","http"},
  *     @SWG\Info(
  *         version="1.0",
  *         title="Hacker News Laravel 5 API",
  *         description="Documentação criada usando o Swagger.",
- *         @SWG\Contact(name="Saulo Gomes", url="https://github.com/saulobr88")
+ *         @SWG\Contact(name="Adrian Juma", url="https://github.com/sheerikie")
  *     ),
  *     @SWG\Definition(
  *         definition="Error",

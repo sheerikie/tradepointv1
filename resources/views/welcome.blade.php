@@ -88,7 +88,7 @@
 
             <div class="links">
                 <a href="{{ route('l5-swagger.api') }}">Documentation</a>
-                <a href="https://github.com/saulobr88/hnl5" target="_blank">GitHub</a>
+                <a href="https://github.com/sheerikie/tradepoint" target="_blank">GitHub</a>
                 <a href="https://laravel.com" target="_blank">About Laravel</a>
                 <a href="http://www.fluxoti.com/" target="_blank">Adrian</a>
             </div>
