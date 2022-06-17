@@ -1,22 +1,22 @@
-# v3.1 syntax
-version: '3.1'
+# v1.0 syntax
+version: '1.0'
 
 services:
-  # PHP (with Caddy)
-  hnl5:
-    image: saulobr88/hnl5:latest
+ 
+  tradepoint:
+    image: sheerikie/tradepoint:latest
     ports:
       - "8080:8080" # real:container
     #networks:
       #- hnlnet
   # NodeJs 8
-  hnvue:
-    image: saulobr88/hnvue:latest
+  tradepointUI:
+    image: sheerikie/tradepoint:latest
     depends_on:
-      - hnl5
+      - tradepoint
     ports:
       - "8081:8080" # real:container
     #networks:
-      #- hnlnet
+      #- tradepointnet
 #networks:
-  #hnlnet:
+  #tradepointnet:
