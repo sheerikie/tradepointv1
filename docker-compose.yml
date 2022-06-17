@@ -1,0 +1,22 @@
+# v3.1 syntax
+version: '3.1'
+
+services:
+  # PHP (with Caddy)
+  hnl5:
+    image: saulobr88/hnl5:latest
+    ports:
+      - "8080:8080" # real:container
+    #networks:
+      #- hnlnet
+  # NodeJs 8
+  hnvue:
+    image: saulobr88/hnvue:latest
+    depends_on:
+      - hnl5
+    ports:
+      - "8081:8080" # real:container
+    #networks:
+      #- hnlnet
+#networks:
+  #hnlnet:
