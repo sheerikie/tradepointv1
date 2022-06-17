@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:8080" # real:container
     #networks:
-      #- hnlnet
+      #- tradepointnet
   # NodeJs 8
   tradepointUI:
     image: sheerikie/tradepoint:latest
