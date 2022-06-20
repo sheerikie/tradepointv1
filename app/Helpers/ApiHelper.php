@@ -55,30 +55,28 @@ class ApiHelper
 
     public static function getTopStories($limit=25)
     {
-        $resource = "newstories";
+        $resource = "topstories";
         $response = self::makeRequest($resource);
         $stories = self::getStoriesFromList($response, $limit);
         
         return $stories;
     }
 
-    public static function getLast600UserStories($limit=600)
+    public static function getLastUserStories($limit=10)
     {
         $resource = "newstories";
         $response = self::makeRequest($resource);
+
         $stories = self::getStoriesFromList($response, $limit);
+    
         $stop_words = [];
         $repeatedwords=[];
-        // dd($stories);
-        foreach ($stories as $key=>$item) {
-            $limit=10;
-            echo strtotime("-1 week");
-            $timestamp=$item->time;
-            echo gmdate("Y-m-d\TH:i:s\Z", $timestamp);
-            $user = self::getUserWithStories($item->by, $limit);
-     
-            if ($user->karma > 1000) {
-                $title = strtolower($item->title); // Make string lowercase
+   
+        for ($i=0;$i<count($stories);$i++) {
+            $user = self::getUserStories($stories[$i]->by, $limit);
+  
+            if ($user->karma > 10) {
+                $title = strtolower($stories[$i]->title); // Make string lowercase
              
                 $words = str_word_count($title, 1); // Returns an array containing all the words found inside the string
             
@@ -86,11 +84,12 @@ class ApiHelper
             $words = array_count_values($words); // Count the number of occurrence
         
             arsort($words); // Sort based on count
-
                 array_push($repeatedwords, array_slice($words, 0, $limit));
             }
         }
-        dd($repeatedwords);
+
+    
+        return $repeatedwords;
     }
 
     public static function getMostOccuringWords($string, $type)
@@ -153,7 +152,7 @@ class ApiHelper
         return $stories;
     }
 
-    public static function getUserWithStories($id, $limit=10)
+    public static function getUserWithStories($id, $limit=1)
     {
         $resource = "user/".$id;
         $user = self::makeRequest($resource);
@@ -162,6 +161,12 @@ class ApiHelper
                 $user->stories = self::getStoriesFromList($user->submitted, $limit);
             }
         }
+        return $user;
+    }
+    public static function getUserStories($id, $limit=1)
+    {
+        $resource = "user/".$id;
+        $user = self::makeRequest($resource);
         return $user;
     }
 }
