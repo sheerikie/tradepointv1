@@ -86,11 +86,24 @@
                 <img src="" alt="logo">
             </div>
 
+
+            <h2 style="color:red">EndPoints:</h2>
             <div class="links">
-                <a href="{{ route('l5-swagger.api') }}">Documentation</a>
+                <a href="{{ route('api.tops') }}" target="_blank">Top Stories</a>
+                <a href="{{ route('api.bests') }}" target="_blank">Best Stories</a>
+                <a href="{{ route('api.lastweekdata') }}" target="_blank">Last Week Data</a>
+                <a href="{{ route('api.karma.userstories') }}" target="_blank">Last 600 UserStories</a>
+                <a href="{{ route('api.laststories') }}" target="_blank">Last Stories</a>
+                <a href="{{ route('api.news') }}" target="_blank">News Stories</a>
                 <a href="https://github.com/sheerikie/tradepoint" target="_blank">GitHub</a>
-                <a href="https://laravel.com" target="_blank">About Laravel</a>
-                <a href="http://www.fluxoti.com/" target="_blank">Adrian</a>
+                <a href="https://supercooladrianthedev.netlify.app/" target="_blank">Adrian</a>
+            </div> <br>
+
+            <h3 style="color:yellow">Others:</h3>
+            <div class="links">
+                <a href="/api/user/JeffCyr" target="_blank">Get User</a>
+                <a href="/api/item/17789026" target="_blank">Get Item Id</a>
+
             </div>
         </div>
     </div>
