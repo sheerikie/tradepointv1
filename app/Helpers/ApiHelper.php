@@ -62,7 +62,7 @@ class ApiHelper
         return $stories;
     }
 
-    public static function getLastUserStories($limit=10)
+    public static function getLastUserStories($limit=600)
     {
         $resource = "newstories";
         $response = self::makeRequest($resource);
